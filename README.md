@@ -10,8 +10,7 @@ plugin manager and plugin list, spell dictionary, and thesaurus.
 - `spell/` — personal spell-check additions (`en.utf-8.add`)
 - `thesaurus/mthesaur.txt` — Moby Thesaurus, used via `set thesaurus+=`
 - `plugged/` — not tracked; vim-plug installs plugins here (see below)
-
-`.vimrc` itself lives at `~/.vimrc` and is **not** part of this repo.
+- `.vimrc` — main config, symlinked to `~/.vimrc`
 
 ## Setup on a new machine
 
@@ -21,7 +20,11 @@ plugin manager and plugin list, spell dictionary, and thesaurus.
    git clone git@github.com:SomeClown/dotvim.git ~/.vim
    ```
 
-2. Copy your `.vimrc` to `~/.vimrc` (it isn't tracked in this repo).
+2. Symlink `.vimrc` into place:
+
+   ```sh
+   ln -s ~/.vim/.vimrc ~/.vimrc
+   ```
 
 3. Open vim and install plugins:
 
